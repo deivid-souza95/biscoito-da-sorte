@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Efeito para o Cookie do inicio ficar tremendo */
+
+@keyframes efeito-cookie {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    20% {
+      -webkit-transform: translateY(-3x);
+      transform: translateY(-3px);
+    }
+
+    50% {
+      -webkit-transform: translateX(-10px);
+      transform: translateX(-10px);
+    }
+
+    80% {
+      -webkit-transform: translateY(-3px);
+      transform: translateY(-3px);
+    }
+
+    100% {
+      -webkit-transform: translateX(-10px);
+      transform: translateX(-10px);
+    }
+}
+
+/* Efeito para a frase subir pequena e de baixo pra cima */
+
+@keyframes efeito-p {
+  0% {
+    transform: translateY(200px) scale(0.1);
+  }
+
+  100% {
+    transform: translateY(0px); scale: (0.1);
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+:root {
+  font-family: 62.5%;
+}
+
+.hide {
+  display: none;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #34355B;
+}
+
+body {
+  height: 100vh;
+  font-family: 1.6rem;
+
+  display: grid;
+  place-items: center;
+
+  background: linear-gradient(100deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+main {
+  text-align: center;
+  width: min(42.0rem, 90%);
+  /* height: 42.4rem; */
+
+  padding: 4.8rem 6.4rem 6.4rem;
+
+  border-radius: .5rem;
+  box-shadow: 0px 20px 50px 0px #000000CC;
+
+  background-color: white;
+}
+
+/* screen 1 */
+
+h1 {
+  /* max-width: 25.8rem; */
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  margin-bottom: 1.4rem;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  
+  margin-bottom: 2.6rem;
+}
+
+.screen1 button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  
+  width: 24.8rem;
+  height: 19.0rem;
+
+  cursor: pointer;
+
+  background-position: center;
+  background-color: white;
+  background-image: url(./assets/cookie-open.png);
+  background-repeat: no-repeat;
+}
+
+.screen1 button:hover {
+  animation: efeito-cookie 0.3s infinite;
+}
+
+/* screen 2 */
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  
+  color: #34355B;
+  
+  margin-bottom: 1.7rem;
+}
+
+.screen2 p {
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 2.0rem;
+  min-width: 27.0rem;
+  
+  padding: 1rem;
+  background-color: #E4EDF1;
+  margin-bottom: 1.7rem;
+
+  animation: efeito-p 3s ease-out;
+}
+
+.screen2 img {
+  /* width: 30.0rem;
+  height: 20.0rem; */
+  padding: 4.3rem 0;
+}
+
+.screen2 button {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  font-weight: 700;
+
+  color: white;
+
+  width: 17.4rem;
+  height: 5.2rem;
+  border-radius: .4rem;
+  gap: .1rem;
+  cursor: pointer;
+
+  margin-top: 1.7rem;
+
+  border: none;
+  background-color: #FF9500;
+}
+
+.screen2 button:hover {
+  /* color: rgb(12, 6, 6); */
+  background-color: #815516;
+  transition: background .9s;
+}
